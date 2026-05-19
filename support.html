@@ -1,16 +1,35 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pulse — Support</title>
-<style>body{font:16px/1.6 -apple-system,system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 20px;color:#1c1c1e}h1{font-size:28px}h2{font-size:20px;margin-top:32px}a{color:#2b5bf2}code{background:#f2f2f7;padding:2px 5px;border-radius:4px}</style>
+<style>body{font:16px/1.6 -apple-system,system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 20px;color:#1c1c1e}h1{font-size:28px}h2{font-size:21px;margin-top:36px;border-top:1px solid #ececf1;padding-top:24px}h2:first-of-type{border:0;padding-top:0}h3{font-size:16px;margin:20px 0 4px}a{color:#2b5bf2}code{background:#f2f2f7;padding:2px 5px;border-radius:4px}.muted{color:#6b6b76;font-size:14px}</style>
 </head><body>
 <h1>Pulse — Support</h1>
-<p>Pulse shows your Paddle revenue (today, 7 days, 30 days), transactions and KPIs — combined across multiple accounts, all on-device.</p>
-<h2>Getting started</h2>
+<p>Pulse shows your Paddle revenue (today, 7 days, 30 days), transactions and KPIs — combined across multiple accounts, all on-device. You can also buy the full source code to customize and ship your own.</p>
+
+<h2>Your purchase &amp; invoices (source code)</h2>
+<p>Payments are handled by <strong>Polar</strong>, our merchant of record. Polar issues your receipt/invoice and manages the download — so everything about a purchase lives in the Polar customer portal:</p>
+<p><strong>→ <a href="https://polar.sh/typing-technology-co-ltd/portal">Open the customer portal</a></strong></p>
+<p>Enter the email you used at checkout; Polar emails you a one-time link. From the portal you can:</p>
+<h3>Re-download the source</h3>
+<p>Your purchase doesn't expire — sign in to the portal any time to download the latest delivered zip again.</p>
+<h3>Get your invoice / receipt</h3>
+<p>The order-confirmation email from <code>support@pulserevenue.app</code> is your receipt. A formal invoice (with your billing details, VAT/tax where applicable) can be downloaded or generated from the order in the portal. Because Polar is the merchant of record, any tax is handled and shown there.</p>
+<h3>Manage the purchase</h3>
+<p>The portal lists all your orders and benefits. The source bundle is a one-time purchase — there's no subscription to cancel.</p>
+
+<h2>Purchase FAQ</h2>
+<p><strong>I didn't get any email after paying.</strong> Check the spam folder and confirm which address you entered at checkout — the email goes there, not necessarily your main inbox. Either way you can always access the download via the <a href="https://polar.sh/typing-technology-co-ltd/portal">customer portal</a>.</p>
+<p><strong>What's included?</strong> The complete Xcode project plus an <code>AGENTS.md</code> guide, delivered as a single zip — instant download after payment.</p>
+<p><strong>Can I use it commercially?</strong> Yes — the license covers personal and commercial use. Build on it, rebrand it, and ship your own app.</p>
+<p><strong>Refunds?</strong> There's a 7-day money-back guarantee — reply to your receipt email within 7 days. Polar (merchant of record) processes the refund.</p>
+
+<h2>The app — getting started</h2>
 <p>In the Paddle dashboard go to <strong>Developer Tools → Authentication → API keys → New key</strong>. Make it <strong>read-only</strong> with these permissions: <code>metrics.read</code>, <code>transaction.read</code>, <code>product.read</code>, <code>customer.read</code>, <code>address.read</code>. Paste it into Pulse → Settings → Add account.</p>
-<h2>FAQ</h2>
+<h2>App FAQ</h2>
 <p><strong>Is my key safe?</strong> Yes — it stays in your device Keychain and only talks to Paddle directly.</p>
 <p><strong>Why is the first sync slow?</strong> It downloads 60 days of transactions once, then refreshes incrementally. It resumes if interrupted.</p>
 <p><strong>Multiple accounts?</strong> Add as many keys as you like in Settings; all data is combined.</p>
+
 <h2>Contact</h2>
-<p><a href="mailto:tonymini@devuap.com">tonymini@devuap.com</a></p>
+<p><a href="mailto:support@pulserevenue.app">support@pulserevenue.app</a></p>
 </body></html>

@@ -35,6 +35,24 @@ a{color:#fff;text-decoration:none}
 .btn{background:#fff;color:#1b2a6b!important;font-weight:700;padding:15px 26px;border-radius:14px;display:inline-block}
 .btn.ghost{background:rgba(255,255,255,.14);color:#fff!important;backdrop-filter:blur(6px)}
 .btn.soon{cursor:default;opacity:.92}
+.btn.buy{background:linear-gradient(135deg,#7c6cff,#a06bff);color:#fff!important}
+.source{background:linear-gradient(150deg,#1b2a6b,#3a1e7a 60%,#5a2a8c);color:#fff;padding:84px 0;position:relative;overflow:hidden}
+.source::after{content:"";position:absolute;inset:auto -10% -45% -10%;height:60%;background:radial-gradient(closest-side,rgba(124,108,255,.30),transparent)}
+.source .kicker{color:#bdacff}
+.source h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.02em;max-width:760px}
+.source .lede{color:#cdd3ee;font-size:18px;margin-top:14px;max-width:680px}
+.srcgrid{display:grid;grid-template-columns:1.25fr .85fr;gap:42px;margin-top:44px;align-items:start}
+.inc{list-style:none;display:grid;gap:13px}
+.inc li{display:flex;gap:12px;font-size:16px;color:#e7ebff;line-height:1.5}
+.inc li b{color:#fff}
+.inc li::before{content:"✓";color:#7ee0a8;font-weight:800;flex:0 0 auto}
+.price{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:32px;text-align:center;backdrop-filter:blur(6px)}
+.price .amt{font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.price .amt span{font-size:18px;color:#cdd3ee;font-weight:600}
+.price .psub{color:#c4cdf0;font-size:14.5px;margin:8px 0 20px}
+.price .btn{display:block;width:100%}
+.price small{display:block;color:#9aa6d8;margin-top:14px;font-size:12.5px;line-height:1.5}
+.source code{font:13px ui-monospace,Menlo,monospace;background:rgba(255,255,255,.12);padding:1px 6px;border-radius:5px}
 .features{padding:24px 22px 8px}
 .feat{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:56px 0}
 .feat+.feat{border-top:1px solid #e9ebf3}
@@ -58,6 +76,8 @@ footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
  .feat{grid-template-columns:1fr;gap:26px;padding:44px 0}
  .feat.alt .txt{order:0}.grid3{grid-template-columns:1fr}
  .privacy{padding:52px 0}
+ .srcgrid{grid-template-columns:1fr;gap:28px}
+ .source{padding:56px 0}
 }
 </style></head><body>
 
@@ -66,6 +86,7 @@ footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
   <h1>Your Paddle revenue, at a glance</h1>
   <p>Pulse turns your Paddle account into a clean, private revenue dashboard — today, this week, this month — combined across every account, right on your iPhone.</p>
   <div class="cta">
+    <a class="btn buy" href="#source">Own the source — $19</a>
     <span class="btn soon">Coming soon to the App Store</span>
     <a class="btn ghost" href="#features">How it works</a>
   </div>
@@ -109,6 +130,33 @@ footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
     <div class="card"><h3>On-device only</h3><p>Data is cached on your phone and cleared when you delete the app.</p></div>
     <div class="card"><h3>Read-only</h3><p>Pulse only ever reads. It can never change anything in your Paddle account.</p></div>
     <div class="card"><h3>Gross, done right</h3><p>Revenue is post-discount, pre-tax &amp; fee — the number you actually care about.</p></div>
+  </div>
+</div></section>
+
+<section class="source" id="source"><div class="wrap">
+  <div class="kicker">Own it — don't rent it</div>
+  <h2>Buy the Pulse source code — $19</h2>
+  <p class="lede">Software is going personal. Instead of installing someone else's app, start from a finished, App-Store-quality codebase and make it yours — with your AI agent doing the heavy lifting. Pulse is the foundation; you ship the version you actually want.</p>
+  <div class="srcgrid">
+    <ul class="inc">
+      <li><b>The complete native SwiftUI app</b> — ~2,400 lines, zero third-party dependencies, builds clean.</li>
+      <li><b>An <code>AGENTS.md</code> built in</b> — point Claude Code, Codex or Gemini at it and add features in minutes, not days.</li>
+      <li><b>Multiple Paddle accounts</b> — combine unlimited read-only keys into one merged dashboard.</li>
+      <li><b>Home-screen widgets</b> (small &amp; medium) via WidgetKit + App Group, auto-refreshed.</li>
+      <li><b>A battle-tested sync engine</b> — incremental, resumable, concurrency-coalesced, with 5xx/429 retry &amp; backoff so polling stays consistent.</li>
+      <li><b>100% on-device</b> — no servers, no tracking, key in the Keychain. Nothing to host, nothing to pay for.</li>
+      <li><b>Revenue done right</b> — gross = grand total − tax, UTC windows, hourly “today”, previous-period overlay.</li>
+      <li><b>Searchable transactions</b> with rich detail (gross / tax / fee / net / customer / country).</li>
+      <li><b>Animated multi-step onboarding</b>, native Settings, light/dark, Swift Charts throughout.</li>
+      <li><b>Provider-agnostic core</b> — one clean seam to add Stripe, Polar, Lemon Squeezy or any gateway.</li>
+      <li>Skips ~5 hours of boilerplate. Customize it, rebrand it, even resell your own version.</li>
+    </ul>
+    <div class="price">
+      <div class="amt">$19<span> one-time</span></div>
+      <div class="psub">Full source · yours forever · no subscription</div>
+      <span class="btn buy soon">Buy now — checkout opening shortly</span>
+      <small>Instant download: the full Xcode project + <code>AGENTS.md</code> to brief your AI agent. Personal &amp; commercial use — customize, rebrand, even resell.</small>
+    </div>
   </div>
 </div></section>
 

@@ -26,19 +26,21 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 body{font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
 .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
 a{color:#fff;text-decoration:none}
-.hero{background:linear-gradient(150deg,#1b2a6b,#3a1e7a 60%,#5a2a8c);color:#fff;text-align:center;padding:84px 22px 76px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(150deg,#1b2a6b,#3a1e7a 60%,#5a2a8c);color:#fff;padding:60px 22px;position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center}
 .hero::after{content:"";position:absolute;inset:auto -10% -40% -10%;height:55%;background:radial-gradient(closest-side,rgba(124,108,255,.35),transparent)}
-.icon{width:96px;height:96px;border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.35);margin-bottom:22px}
-.hero h1{font-size:clamp(33px,5vw,52px);font-weight:800;letter-spacing:-.02em;line-height:1.12;max-width:14ch;margin:0 auto}
-.hero .sub{font-size:clamp(17px,2.1vw,20px);color:#cdd3ee;margin:18px auto 30px;max-width:580px}
-.cta{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.herogrid{max-width:1080px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;position:relative;z-index:1}
+.herocopy{text-align:left}
+.icon{width:84px;height:84px;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.35);margin-bottom:20px}
+.hero h1{font-size:clamp(32px,4.3vw,49px);font-weight:800;letter-spacing:-.02em;line-height:1.12;max-width:15ch}
+.hero .sub{font-size:clamp(16px,1.5vw,19px);color:#cdd3ee;margin:18px 0 28px;max-width:520px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start}
 .btn{font-weight:700;padding:16px 28px;border-radius:14px;display:inline-block;font-size:16px}
 .btn.primary{background:linear-gradient(135deg,#8b78ff,#a06bff);color:#fff!important;box-shadow:0 12px 30px rgba(124,108,255,.45)}
 .btn.ghost{background:rgba(255,255,255,.14);color:#fff!important;backdrop-filter:blur(6px)}
 .microcopy{margin-top:16px;font-size:13.5px;color:#aab3da}
 .soonline{margin-top:8px;font-size:13.5px;color:#9aa6d8}
-.heroshot{position:relative;margin:50px auto 0;width:250px;max-width:62vw}
-.heroshot img{width:100%;height:auto;display:block;border-radius:34px;box-shadow:0 34px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.14)}
+.heroshot{display:flex;justify-content:center}
+.heroshot img{height:min(640px,78vh);width:auto;max-width:100%;display:block;border-radius:34px;box-shadow:0 34px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.14)}
 .trust{background:#fff;border-bottom:1px solid #e9ebf3;padding:20px 0}
 .trust ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:center;align-items:center}
 .trust li{color:#41485f;font-size:14.5px;font-weight:600;display:flex;gap:8px;align-items:center}
@@ -97,6 +99,13 @@ footer{background:#08090f;color:#aeb4cf;text-align:center;padding:42px 22px;font
 footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
 .built{margin-top:12px}.built a{color:#8ea2ff}
 @media(max-width:820px){
+ .hero{min-height:auto;padding:62px 22px 56px}
+ .herogrid{grid-template-columns:1fr;gap:32px;text-align:center}
+ .herocopy{text-align:center}
+ .hero h1{margin:0 auto;max-width:16ch}
+ .hero .sub{margin:18px auto 26px}
+ .cta{justify-content:center}
+ .heroshot img{height:auto;width:248px;max-width:64vw}
  .feat{grid-template-columns:1fr;gap:24px;padding:40px 0}
  .feat.alt .txt{order:0}
  .grid3{grid-template-columns:1fr}
@@ -108,16 +117,20 @@ footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
 </style></head><body>
 
 <header class="hero">
-  <img class="icon" src="icon.png" alt="Pulse app icon">
-  <h1>Your Paddle revenue, on your iPhone</h1>
-  <p class="sub">Pulse is a private, native iOS app: today / 7-day / 30-day vs the period before, every transaction searchable, home-screen widgets — every Paddle account merged into one view. Your key stays on your device.</p>
-  <div class="cta">
-    <a class="btn primary" href="#source">Own the source — $19</a>
-    <a class="btn ghost" href="#features">See how it works</a>
+  <div class="herogrid">
+    <div class="herocopy">
+      <img class="icon" src="icon.png" alt="Pulse app icon">
+      <h1>Your Paddle revenue, on your iPhone</h1>
+      <p class="sub">Pulse is a private, native iOS app: today / 7-day / 30-day vs the period before, every transaction searchable, home-screen widgets — every Paddle account merged into one view. Your key stays on your device.</p>
+      <div class="cta">
+        <a class="btn primary" href="#source">Own the source — $19</a>
+        <a class="btn ghost" href="#features">See how it works</a>
+      </div>
+      <div class="microcopy">Full Xcode project + AGENTS.md · instant download · personal &amp; commercial use</div>
+      <div class="soonline">The iOS app itself is coming to the App Store soon.</div>
+    </div>
+    <div class="heroshot"><img src="shots/revenue.png" alt="Pulse revenue dashboard on iPhone showing today and 7-day revenue" width="1206" height="2622" fetchpriority="high"></div>
   </div>
-  <div class="microcopy">Full Xcode project + AGENTS.md · instant download · personal &amp; commercial use</div>
-  <div class="soonline">The iOS app itself is coming to the App Store soon.</div>
-  <div class="heroshot"><img src="shots/revenue.png" alt="Pulse revenue dashboard on iPhone showing today and 7-day revenue" width="1206" height="2622" fetchpriority="high"></div>
 </header>
 
 <section class="trust"><div class="wrap"><ul>

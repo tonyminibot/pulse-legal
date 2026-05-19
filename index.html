@@ -1,0 +1,94 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pulse — Paddle revenue, at a glance</title>
+<meta name="description" content="Pulse turns your Paddle account into a clean, private revenue dashboard. Today / 7-day / 30-day, transactions, widgets — combined across accounts, all on-device.">
+<style>
+:root{--ink:#0e1020;--mut:#5b6178;--bg:#f6f7fb;--a:#2b5bf2;--a2:#6d3bf2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:#fff;text-decoration:none}
+.hero{background:linear-gradient(150deg,#1b2a6b,#3a1e7a 60%,#5a2a8c);color:#fff;text-align:center;padding:96px 22px 120px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -40% -10%;height:60%;background:radial-gradient(closest-side,rgba(124,108,255,.35),transparent)}
+.icon{width:108px;height:108px;border-radius:26px;box-shadow:0 18px 50px rgba(0,0,0,.35);margin-bottom:26px}
+.hero h1{font-size:clamp(34px,5vw,56px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.hero p{font-size:clamp(17px,2.2vw,22px);color:#cdd3ee;margin:18px auto 34px;max-width:620px}
+.cta{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{background:#fff;color:#1b2a6b!important;font-weight:700;padding:15px 26px;border-radius:14px;display:inline-block}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff!important;backdrop-filter:blur(6px)}
+section{padding:84px 0}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.feat:nth-child(even) .txt{order:2}
+.feat h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+.feat p{color:var(--mut);font-size:18px}
+.kicker{color:var(--a);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.shot{display:flex;justify-content:center}
+.shot img{width:300px;max-width:78vw;border-radius:38px;box-shadow:0 26px 70px rgba(20,24,60,.22);border:1px solid rgba(20,24,60,.06)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+.card{background:#fff;border:1px solid #e9ebf3;border-radius:20px;padding:26px}
+.card h3{font-size:19px;margin-bottom:8px}.card p{color:var(--mut);font-size:15.5px}
+.center{text-align:center;max-width:680px;margin:0 auto}
+footer{background:#0e1020;color:#aeb4cf;text-align:center;padding:54px 22px;font-size:14px}
+footer a{color:#aeb4cf;text-decoration:underline;margin:0 10px}
+@media(max-width:820px){.feat,.grid3{grid-template-columns:1fr}.feat:nth-child(even) .txt{order:0}section{padding:60px 0}}
+</style></head><body>
+
+<header class="hero">
+  <img class="icon" src="icon.png" alt="Pulse">
+  <h1>Your Paddle revenue, at a glance</h1>
+  <p>Pulse turns your Paddle account into a clean, private revenue dashboard — today, this week, this month — combined across every account, right on your iPhone.</p>
+  <div class="cta">
+    <a class="btn" href="https://apps.apple.com/app/id6770415388">Download on the App Store</a>
+    <a class="btn ghost" href="support.html">How it works</a>
+  </div>
+</header>
+
+<section class="wrap"><div class="feat">
+  <div class="txt"><div class="kicker">Revenue dashboard</div>
+    <h2>Today, 7-day &amp; 30-day — vs the period before</h2>
+    <p>Big, clear numbers with a live trend chart and a dashed comparison line. Scrub any point. Switch between All, One-off and Renewal revenue instantly.</p></div>
+  <div class="shot"><img src="shots/revenue.png" alt="Pulse revenue dashboard"></div>
+</div></section>
+
+<section class="wrap"><div class="feat">
+  <div class="txt"><div class="kicker">Transactions</div>
+    <h2>Every sale, searchable — with the detail that matters</h2>
+    <p>Filter by product, search by customer or id, and tap any sale for gross, tax, Paddle fee, net, customer and country — all in a tap.</p></div>
+  <div class="shot"><img src="shots/transactions.png" alt="Pulse transactions"></div>
+</div></section>
+
+<section class="wrap"><div class="feat">
+  <div class="txt"><div class="kicker">Home-screen widgets</div>
+    <h2>Revenue without opening the app</h2>
+    <p>Small and medium widgets show today, 7-day and 30-day revenue with deltas, refreshed automatically. Glance and go.</p></div>
+  <div class="shot"><img src="shots/widget.png" alt="Pulse widgets"></div>
+</div></section>
+
+<section class="wrap"><div class="feat">
+  <div class="txt"><div class="kicker">Multiple accounts</div>
+    <h2>Every Paddle account, combined into one view</h2>
+    <p>Add as many read-only keys as you run. Revenue, transactions, KPIs and charts are merged into a single, unified picture of the business.</p></div>
+  <div class="shot"><img src="shots/accounts.png" alt="Pulse multiple accounts"></div>
+</div></section>
+
+<section class="wrap center">
+  <div class="kicker">Private by design</div>
+  <h2 style="font-size:clamp(26px,3.4vw,36px);font-weight:800;letter-spacing:-.02em">Your key never leaves your iPhone</h2>
+  <p style="color:var(--mut);font-size:18px;margin-top:12px">No servers. No accounts. No tracking. Your read-only Paddle key is stored in the iOS Keychain and talks straight to Paddle.</p>
+  <div class="grid3">
+    <div class="card"><h3>On-device only</h3><p>Data is cached on your phone and cleared when you delete the app.</p></div>
+    <div class="card"><h3>Read-only</h3><p>Pulse only ever reads. It can never change anything in your Paddle account.</p></div>
+    <div class="card"><h3>Gross, done right</h3><p>Revenue is post-discount, pre-tax &amp; fee — the number you actually care about.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div>Pulse — Paddle revenue analytics for iPhone</div>
+  <div style="margin-top:10px">
+    <a href="https://apps.apple.com/app/id6770415388">App Store</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </div>
+  <div style="margin-top:14px;opacity:.6">© 2026 Dinh Quang Trung</div>
+</footer>
+</body></html>

@@ -42,10 +42,10 @@ a{color:#fff;text-decoration:none}
 .source h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.02em;max-width:760px}
 .source .lede{color:#cdd3ee;font-size:18px;margin-top:14px;max-width:680px}
 .srcgrid{display:grid;grid-template-columns:1.25fr .85fr;gap:42px;margin-top:44px;align-items:start}
-.inc{list-style:none;display:grid;gap:13px}
-.inc li{display:flex;gap:12px;font-size:16px;color:#e7ebff;line-height:1.5}
-.inc li b{color:#fff}
-.inc li::before{content:"✓";color:#7ee0a8;font-weight:800;flex:0 0 auto}
+.inc{list-style:none;display:grid;gap:14px}
+.inc li{position:relative;padding-left:30px;font-size:16px;color:#cdd3ee;line-height:1.55}
+.inc li b{color:#fff;font-weight:700}
+.inc li::before{content:"✓";position:absolute;left:0;top:0;color:#7ee0a8;font-weight:800}
 .price{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:32px;text-align:center;backdrop-filter:blur(6px)}
 .price .amt{font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1}
 .price .amt span{font-size:18px;color:#cdd3ee;font-weight:600}

@@ -65,6 +65,19 @@ a{color:#fff;text-decoration:none}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
 .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px;text-align:left}
 .card h4{font-size:17px;margin-bottom:7px}.card p{color:#aeb8e0;font-size:14.5px}
+.inside{background:var(--bg);padding:72px 0;border-top:1px solid #e9ebf3}
+.inside .kicker{color:var(--a);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
+.inside h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.inside .lede{color:var(--mut);font-size:17px;margin-top:10px;max-width:640px}
+.inside .tree{background:#0e1020;color:#e6e8f0;border-radius:14px;padding:22px 26px;margin-top:28px;font:13.5px/1.7 ui-monospace,"SF Mono","Menlo",monospace;overflow-x:auto;white-space:pre;box-shadow:0 6px 30px rgba(20,22,60,.10)}
+.inside .tree .dim{color:#6e7298}
+.inside .tree .em{color:#7bd9ff}
+.inside .tree .a{color:#bdacff}
+.inside .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.inside .stat{background:#fff;border:1px solid #e9ebf3;border-radius:12px;padding:18px 16px}
+.inside .stat .n{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.inside .stat .l{font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--mut);margin-top:4px}
+@media (max-width:720px){.inside .stats{grid-template-columns:repeat(2,1fr)} .inside .tree{font-size:11px;padding:16px 18px;line-height:1.55}}
 .source{background:linear-gradient(150deg,#1b2a6b,#3a1e7a 60%,#5a2a8c);color:#fff;padding:84px 0;position:relative;overflow:hidden}
 .source::after{content:"";position:absolute;inset:auto -10% -45% -10%;height:60%;background:radial-gradient(closest-side,rgba(124,108,255,.30),transparent)}
 .source .kicker{color:#bdacff;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
@@ -259,6 +272,41 @@ footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
     </div>
   </div>
 </div></section>
+
+<section class="inside" id="inside"><div class="wrap">
+  <div class="section-h">
+    <div class="kicker">Inside the source</div>
+    <h2>Clean Swift, no third-party dependencies — the first thing your AI agent sees.</h2>
+    <p class="lede">~2,400 lines of SwiftUI across 20 files. Files named for what they do; one purpose per module. Builds clean on a fresh Xcode install.</p>
+  </div>
+  <div class="tree">
+<span class="dim">Pulse-Source/</span>
+<span class="dim">├── </span><span class="a">project.yml</span>                     <span class="dim"># XcodeGen — one source of truth for targets/signing</span>
+<span class="dim">├── </span><span class="em">Pulse/</span>
+<span class="dim">│   ├── </span><span class="em">App/</span>                       <span class="dim"># PulseApp + RootView</span>
+<span class="dim">│   ├── </span><span class="em">Features/</span>
+<span class="dim">│   │   ├── </span>Dashboard/             <span class="dim"># Today / 7d / 30d cards + chart</span>
+<span class="dim">│   │   ├── </span>Transactions/          <span class="dim"># Searchable list + detail sheet</span>
+<span class="dim">│   │   ├── </span>Onboarding/            <span class="dim"># 3-step intro + key entry</span>
+<span class="dim">│   │   ├── </span>Settings/              <span class="dim"># Multi-account + cache controls</span>
+<span class="dim">│   │   └── </span>Marketing/             <span class="dim"># Screenshot harness — yours to delete</span>
+<span class="dim">│   ├── </span><span class="em">Models/</span>                    <span class="dim"># PaddleModels — windows, gross, refunds</span>
+<span class="dim">│   ├── </span><span class="em">Services/</span>                  <span class="dim"># PaddleClient + RevenueAggregator</span>
+<span class="dim">│   ├── </span><span class="em">Storage/</span>                   <span class="dim"># AppSettings + TransactionStore + Keychain</span>
+<span class="dim">│   └── </span><span class="em">UI/</span>                        <span class="dim"># Theme</span>
+<span class="dim">├── </span><span class="em">PulseWidget/</span>                 <span class="dim"># Small + medium home-screen widgets</span>
+<span class="dim">├── </span><span class="em">Shared/</span>                      <span class="dim"># WidgetContent — App-Group bridge</span>
+<span class="dim">├── </span><span class="em">PulseTests/</span>                  <span class="dim"># Unit tests for the math (gross, windows)</span>
+<span class="dim">└── </span><span class="a">AGENTS.md</span>                       <span class="dim"># Architecture brief for Claude / Codex / Gemini</span>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="n">~2,400</div><div class="l">Swift LOC</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">3rd-party deps</div></div>
+    <div class="stat"><div class="n">20</div><div class="l">files</div></div>
+    <div class="stat"><div class="n">iOS 17+</div><div class="l">SwiftUI · WidgetKit</div></div>
+  </div>
+</div></section>
+
 
 <section class="faq"><div class="wrap">
   <div class="section-h">

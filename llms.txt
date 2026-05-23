@@ -1,0 +1,29 @@
+# Pulse
+
+> Pulse is a private, native SwiftUI iOS app for Paddle Billing revenue analytics. Today / 7-day / 30-day windows vs the previous period, searchable transactions, home-screen widgets — all on-device. Read-only Paddle API key is stored in the iOS Keychain and never leaves the phone. Free on the App Store; full Xcode source available as a one-time $19 purchase for developers who want to rebrand it or learn from a complete production app.
+
+## Product
+
+- [Pulse on the App Store](https://apps.apple.com/app/id6770415388): Free download.
+- [Source bundle ($19)](https://pulserevenue.app/#source): Complete Xcode project — Pulse + PulseWidget + Shared + PulseTests, ~2,800 lines of SwiftUI, zero third-party dependencies, includes an AGENTS.md briefing for AI coding agents. Personal & commercial use; ship derivative apps.
+- [Pulse + Skyline source bundle ($29, save $9)](https://buy.polar.sh/polar_cl_O7W1Ojtq3ORpREu9TfI6PpUe6BgKbNq2wCfFY188eiZ): Both apps' source.
+
+## Architecture (for AI agents inspecting the source)
+
+- SwiftUI + WidgetKit on iOS 17+
+- Paddle Billing REST API client (`Pulse/Services/PaddleClient.swift`)
+- Revenue aggregation pipeline (`RevenueAggregator.swift`) — handles refunds, fee deduction, multi-currency
+- On-device caching via SwiftData + UserDefaults
+- DemoPaddleClient — fixture for App Store Review (Apple G2.1(a) compliance pattern)
+- Localized to 14 languages out of the box via String Catalog
+
+## Site structure
+
+- [/](https://pulserevenue.app/): Product landing — hero, features, source-bundle section, FAQ
+- [/changelog](https://pulserevenue.app/changelog): Release history with semantic article markup
+- [/privacy](https://pulserevenue.app/privacy.html): Privacy policy
+- [/support](https://pulserevenue.app/support.html): Support contact
+
+## Author
+
+Tony Dinh (@tdinh_me), independent developer based in Đà Nẵng, Vietnam. Operates Typing Technology Co. Ltd. — see [tonysoftware.com](https://tonysoftware.com) for the full portfolio.

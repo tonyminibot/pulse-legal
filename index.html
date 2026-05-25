@@ -176,6 +176,15 @@ a{color:#fff;text-decoration:none}
 .final{background:#0e1020;color:#fff;text-align:center;padding:70px 22px}
 .final h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
 .final p{color:#aeb4cf;margin-bottom:24px}
+.crosspromo{background:#0b0d18;color:#cdd3ee;padding:50px 22px 40px;text-align:center;border-top:1px solid #1a1d2e}
+.crosspromo .cp-label{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#8ea2ff;font-weight:700;margin-bottom:22px}
+.crosspromo .cp-grid{max-width:680px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.crosspromo .cp-card{display:flex;align-items:center;gap:14px;padding:16px 18px;background:#13162a;border:1px solid #232745;border-radius:14px;text-align:left;text-decoration:none;color:#fff;transition:transform .15s,border-color .15s,background .15s}
+.crosspromo .cp-card:hover{transform:translateY(-2px);border-color:#3a4070;background:#171b35}
+.crosspromo .cp-card img{width:48px;height:48px;border-radius:11px;flex-shrink:0}
+.crosspromo .cp-card .cp-name{font-weight:800;font-size:15.5px;letter-spacing:-.01em;line-height:1.2;color:#fff}
+.crosspromo .cp-card .cp-desc{font-size:12.5px;color:#9aa2c6;line-height:1.35;margin-top:3px}
+@media (max-width:620px){.crosspromo .cp-grid{grid-template-columns:1fr;gap:11px}.crosspromo .cp-card{padding:14px 15px}}
 footer{background:#08090f;color:#aeb4cf;text-align:center;padding:42px 22px;font-size:14px}
 footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
 .built{margin-top:12px}.built a{color:#8ea2ff}
@@ -402,6 +411,26 @@ footer a{color:#cdd3ee;text-decoration:underline;margin:0 9px}
   <h2>Own the foundation. Ship your version.</h2>
   <p>The complete Pulse source + an AGENTS.md to make it yours — $19, one time.</p>
   <a class="btn primary" href="https://buy.polar.sh/polar_cl_Ho9r10UJfm1zHYGPT4GEFg2q9uhKTxwSaAs6a1vr6Gd">Buy the source — $19</a>
+</section>
+
+<section class="crosspromo">
+  <div class="cp-label">More indie iOS apps by Tony Dinh</div>
+  <div class="cp-grid">
+    <a class="cp-card" href="https://flownmap.com/?utm_source=pulserevenue&amp;utm_medium=cross-promo&amp;utm_campaign=more-by-author">
+      <img src="icons-skyline.png" alt="Skyline app icon" width="48" height="48">
+      <div>
+        <div class="cp-name">Skyline</div>
+        <div class="cp-desc">Flight log + 3D globe for iPhone</div>
+      </div>
+    </a>
+    <a class="cp-card" href="https://getaside.app/?utm_source=pulserevenue&amp;utm_medium=cross-promo&amp;utm_campaign=more-by-author">
+      <img src="icons-aside.png" alt="Aside app icon" width="48" height="48">
+      <div>
+        <div class="cp-name">Aside</div>
+        <div class="cp-desc">On-device AI chat — Apple Intelligence</div>
+      </div>
+    </a>
+  </div>
 </section>
 
 <footer>

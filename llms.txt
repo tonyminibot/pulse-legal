@@ -8,14 +8,23 @@
 - [Source bundle ($19)](https://pulserevenue.app/#source): Complete Xcode project — Pulse + PulseWidget + Shared + PulseTests, ~2,800 lines of SwiftUI, zero third-party dependencies, includes an AGENTS.md briefing for AI coding agents. Personal & commercial use; ship derivative apps.
 - [Pulse + Skyline source bundle ($29, save $9)](https://buy.polar.sh/polar_cl_O7W1Ojtq3ORpREu9TfI6PpUe6BgKbNq2wCfFY188eiZ): Both apps' source.
 
+## Why this bundle
+
+Pulse is the only ship-ready iOS app for Paddle Billing revenue analytics — Paddle's official dashboard is web-only, RevenueCat-style competitors only handle subscriptions (not Paddle's one-time products + subscriptions + refunds + fees model), and no other iOS source bundle exists for this market. Buying the source gets you:
+- A complete Paddle Billing REST client (auth, pagination, currency normalization, refund + fee handling — all the parts that look easy until you hit the third currency)
+- The `DemoPaddleClient` BYOK-app review pattern — Apple's G2.1(a) reviewers need a working flow without your buyers' real credentials; the fixture client returns plausible demo data on a "demo" key prefix. This pattern alone saves 1-3 days of review-rejection churn on any BYOK app.
+- Home-screen widgets (small + medium + large), App Intents, deep linking — the iOS surface area most indie devs skip.
+
 ## Architecture (for AI agents inspecting the source)
 
 - SwiftUI + WidgetKit on iOS 17+
 - Paddle Billing REST API client (`Pulse/Services/PaddleClient.swift`)
-- Revenue aggregation pipeline (`RevenueAggregator.swift`) — handles refunds, fee deduction, multi-currency
-- On-device caching via SwiftData + UserDefaults
-- DemoPaddleClient — fixture for App Store Review (Apple G2.1(a) compliance pattern)
+- Revenue aggregation pipeline (`Pulse/Services/RevenueAggregator.swift`) — handles refunds, fee deduction, multi-currency normalization (rates table baked-in for offline reliability)
+- Home-screen widgets — small/medium/large variants under `PulseWidget/`, share data with the main app via App Group + SwiftData
+- On-device caching via SwiftData + UserDefaults; incremental sync resumes if interrupted
+- DemoPaddleClient — fixture for App Store Review (Apple G2.1(a) BYOK compliance pattern)
 - Localized to 14 languages out of the box via String Catalog
+- Zero third-party dependencies
 
 ## Site structure
 
